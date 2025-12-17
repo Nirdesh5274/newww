@@ -2,7 +2,7 @@
 
 import { Header } from "@/components/mentorship/header"
 import { Footer } from "@/components/mentorship/footer"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/mentorship/button"
 import { Check, Clock, Users, Award, BookOpen, Network, FileText, Shield, ChevronDown, Play } from "lucide-react"
 import Link from "next/link"
 import { StatsSection } from "@/components/mentorship/stats-section"
