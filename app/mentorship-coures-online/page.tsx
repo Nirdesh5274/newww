@@ -1,15 +1,15 @@
-import { Header } from "@/components/header"
-import { HeroSection } from "@/components/hero-section"
-import { CoursesSection } from "@/components/courses-section"
-import { CourseFeatures } from "@/components/course-features"
-import { StatsSection } from "@/components/stats-section"
-import { TestimonialsSection } from "@/components/testimonials-section"
-import { MentorsSection } from "@/components/mentors-section"
-import { CompaniesSection } from "@/components/companies-section"
-import { FAQSection } from "@/components/faq-section"
-import { CTASection } from "@/components/cta-section"
-import { QuickApplyForm } from "@/components/quick-apply-form"
-import { Footer } from "@/components/footer"
+import { Header } from "@/components/mentorship/header"
+import { HeroSection } from "@/components/mentorship/hero-section"
+import { CoursesSection } from "@/components/mentorship/courses-section"
+import { CourseFeatures } from "@/components/mentorship/course-features"
+import { StatsSection } from "@/components/mentorship/stats-section"
+import { TestimonialsSection } from "@/components/mentorship/testimonials-section"
+import { MentorsSection } from "@/components/mentorship/mentors-section"
+import { CompaniesSection } from "@/components/mentorship/companies-section"
+import { FAQSection } from "@/components/mentorship/faq-section"
+import { CTASection } from "@/components/mentorship/cta-section"
+import { QuickApplyForm } from "@/components/mentorship/quick-apply-form"
+import { Footer } from "@/components/mentorship/footer"
 
 export default function MentorshipCoursesPage() {
   return (
@@ -29,3 +29,4 @@ export default function MentorshipCoursesPage() {
     </main>
   )
 }
+

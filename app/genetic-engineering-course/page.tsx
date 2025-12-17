@@ -1,8 +1,8 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import { Header } from "@/components/mentorship/header"
+import { Footer } from "@/components/mentorship/footer"
 import { Star, Play, CheckCircle2, Users, Calendar, Award, BookOpen } from "lucide-react"
 import Link from "next/link"
 
@@ -406,3 +406,4 @@ export default function GeneticEngineeringCoursePage() {
     </div>
   )
 }
+

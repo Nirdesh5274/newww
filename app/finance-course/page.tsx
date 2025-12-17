@@ -1,11 +1,11 @@
 "use client"
 
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import { Header } from "@/components/mentorship/header"
+import { Footer } from "@/components/mentorship/footer"
 import { Button } from "@/components/ui/button"
 import { Check, Clock, Users, Award, BookOpen, Network, FileText, Shield, ChevronDown, Play } from "lucide-react"
 import Link from "next/link"
-import { StatsSection } from "@/components/stats-section"
+import { StatsSection } from "@/components/mentorship/stats-section"
 import { useState } from "react"
 
 const faqs = [
@@ -665,4 +665,5 @@ export default function FinanceCoursePage() {
     </main>
   )
 }
+
 

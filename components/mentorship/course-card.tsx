@@ -102,3 +102,4 @@ export function CourseCard({ course }: { course: Course }) {
     </div>
   )
 }
+

@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react"
 import { Search, Flame, Star, Monitor, Zap, Wrench, FlaskConical, BarChart3, Globe } from "lucide-react"
-import { CourseCard } from "@/components/course-card"
+import { CourseCard } from "@/components/mentorship/course-card"
 
 const categories = [
   { icon: Flame, label: "Trending Courses", color: "text-orange-500", key: "trending" },
@@ -421,3 +421,4 @@ export function CoursesSection() {
     </section>
   )
 }
+
