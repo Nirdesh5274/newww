@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/mentorship/button"
 
 export function HeroSection() {
   return (

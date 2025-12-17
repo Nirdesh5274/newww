@@ -1,5 +1,5 @@
 import { Star } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/mentorship/button"
 import Link from "next/link"
 
 interface Course {
