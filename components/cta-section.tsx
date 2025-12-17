@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 
 export function CTASection() {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 w-full text-center">
       <h2 className="text-4xl font-bold text-[#1a1a2e] mb-4">
         Ready to Transform
         <br />

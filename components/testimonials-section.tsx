@@ -73,7 +73,7 @@ export function TestimonialsSection() {
 
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1a1a2e]">
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full">
         <h2 className="text-3xl lg:text-4xl font-bold text-center text-white mb-12">Loved by thousands of students</h2>
 
         <div

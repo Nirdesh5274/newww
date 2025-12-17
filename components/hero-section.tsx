@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
   return (
-    <section className="py-12 lg:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section className="py-12 lg:py-20 px-4 sm:px-6 lg:px-8 w-full">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <div>

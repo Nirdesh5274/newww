@@ -69,7 +69,7 @@ export function MentorsSection() {
   }
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 w-full">
       <div className="mb-8">
         <span className="text-[#e85a4f] font-medium">Mentors</span>
         <h2 className="text-3xl lg:text-4xl font-bold text-[#1a1a2e] mt-2">

@@ -66,71 +66,6 @@ const allCourses = {
     },
     {
       id: 2,
-      title: "Web Development",
-      rating: 4.9,
-      reviews: 3897,
-      description:
-        "Web Development focuses on designing and building websites using modern technologies. Learn to create responsive, user-...",
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      id: 3,
-      title: "Artificial Intelligence",
-      rating: 4.7,
-      reviews: 4143,
-      description:
-        "Artificial Intelligence focuses on creating smart systems that mimic human intelligence. Dive into neural networks, deep...",
-      image: "/placeholder.svg?height=200&width=300",
-    },
-  ],
-  cs: [
-    {
-      id: 1,
-      title: "AI Automation",
-      rating: 4.6,
-      reviews: 1897,
-      description:
-        "Whether you want to streamline workflows, build call agents, or launch your own automation-based startup, this course gives...",
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      id: 2,
-      title: "Web Development",
-      rating: 4.9,
-      reviews: 3897,
-      description:
-        "Web Development focuses on designing and building websites using modern technologies. Learn to create responsive, user-...",
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      id: 3,
-      title: "Python with Machine Learning",
-      rating: 4.4,
-      reviews: 2376,
-      description:
-        "Machine Learning combines programming and AI to develop intelligent systems. Master Python libraries and algorithms to...",
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      id: 4,
-      title: "Python with Data Science",
-      rating: 4.5,
-      reviews: 2465,
-      description:
-        "Data Science blends programming with analytical skills to extract insights from data. Learn to manipulate, visualize, and...",
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      id: 5,
-      title: "Artificial Intelligence",
-      rating: 4.7,
-      reviews: 4143,
-      description:
-        "Artificial Intelligence focuses on creating smart systems that mimic human intelligence. Dive into neural networks, deep...",
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      id: 6,
       title: "Cyber Security",
       rating: 4.8,
       reviews: 1675,
@@ -139,7 +74,7 @@ const allCourses = {
       image: "/placeholder.svg?height=200&width=300",
     },
     {
-      id: 7,
+      id: 3,
       title: "Cloud Computing (Azure, AWS)",
       rating: 4.8,
       reviews: 922,
@@ -148,7 +83,72 @@ const allCourses = {
       image: "/placeholder.svg?height=200&width=300",
     },
     {
-      id: 8,
+      id: 4,
+      title: "Digital Marketing",
+      rating: 4.6,
+      reviews: 1199,
+      description:
+        "Digital Marketing builds brands online. Learn SEO, social media, and analytics to create impactful campaigns and drive business...",
+      image: "/placeholder.svg?height=200&width=300",
+    },
+  ],
+  cs: [
+    {
+      id: 1,
+      title: "Web Development",
+      rating: 4.9,
+      reviews: 3897,
+      description:
+        "Web Development focuses on designing and building websites using modern technologies. Learn to create responsive, user-...",
+      image: "/placeholder.svg?height=200&width=300",
+    },
+    {
+      id: 2,
+      title: "Python with Machine Learning",
+      rating: 4.4,
+      reviews: 2376,
+      description:
+        "Machine Learning combines programming and AI to develop intelligent systems. Master Python libraries and algorithms to...",
+      image: "/placeholder.svg?height=200&width=300",
+    },
+    {
+      id: 3,
+      title: "Python with Data Science",
+      rating: 4.5,
+      reviews: 2465,
+      description:
+        "Data Science blends programming with analytical skills to extract insights from data. Learn to manipulate, visualize, and...",
+      image: "/placeholder.svg?height=200&width=300",
+    },
+    {
+      id: 4,
+      title: "Artificial Intelligence",
+      rating: 4.7,
+      reviews: 4143,
+      description:
+        "Artificial Intelligence focuses on creating smart systems that mimic human intelligence. Dive into neural networks, deep...",
+      image: "/placeholder.svg?height=200&width=300",
+    },
+    {
+      id: 5,
+      title: "Cyber Security",
+      rating: 4.8,
+      reviews: 1675,
+      description:
+        "Cyber Security focuses on protecting systems from digital threats. Gain expertise in encryption, network security, and...",
+      image: "/placeholder.svg?height=200&width=300",
+    },
+    {
+      id: 6,
+      title: "Cloud Computing (Azure, AWS)",
+      rating: 4.8,
+      reviews: 922,
+      description:
+        "Cloud Computing leverages remote servers to store, manage, and process data. Master Azure and AWS platforms...",
+      image: "/placeholder.svg?height=200&width=300",
+    },
+    {
+      id: 7,
       title: "App Development",
       rating: 4.3,
       reviews: 874,
@@ -378,7 +378,7 @@ export function CoursesSection() {
   }, [activeCategory, searchQuery])
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 w-full">
       <h2 className="text-4xl font-bold text-center text-[#1a1a2e] mb-12">Courses Available</h2>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">

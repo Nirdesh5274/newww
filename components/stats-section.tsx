@@ -78,7 +78,7 @@ export function StatsSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section ref={sectionRef} className="py-16 px-4 sm:px-6 lg:px-8 w-full">
       <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (

@@ -35,11 +35,11 @@ export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 w-full">
       <h2 className="text-4xl font-bold text-center text-[#1a1a2e] mb-4">Frequently Asked Questions</h2>
       <p className="text-center text-gray-600 mb-12">Everything you need to know about our Mentor-Led Course</p>
 
-      <div className="space-y-4">
+      <div className="space-y-4 max-w-4xl mx-auto">
         {faqs.map((faq, index) => (
           <div key={index} className="border border-gray-200 rounded-xl overflow-hidden">
             <button

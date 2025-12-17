@@ -43,7 +43,7 @@ const features = [
 
 export function CourseFeatures() {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 w-full">
       <h2 className="text-4xl font-bold text-center text-[#1a1a2e] mb-4">Course Features</h2>
       <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
         Comprehensive courses featuring 25+ hours of live & recorded sessions, mentorship, live projects, networking,

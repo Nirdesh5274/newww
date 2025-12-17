@@ -69,7 +69,7 @@ export function QuickApplyForm() {
 
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1a1a2e]">
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Form Section */}
           <div>

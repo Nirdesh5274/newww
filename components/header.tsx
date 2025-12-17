@@ -4,6 +4,35 @@ import Link from "next/link"
 import { ChevronDown, ChevronRight } from "lucide-react"
 import { useState, useRef, useEffect } from "react"
 
+// Helper function to convert course name to URL
+const getCourseUrl = (courseName: string) => {
+  const urlMap: { [key: string]: string } = {
+    "AI Automation": "/ai-automation-courses",
+    "Web Development": "/web-development-course",
+    "Python with Machine Learning": "/machine-learning-course",
+    "Python with Data Science": "/machine-learning-course",
+    "Cyber Security": "/cyber-security-course",
+    "Artificial Intelligence": "/ai-automation-courses",
+    "AutoCAD": "/autocad-course",
+    "Car Design": "/car-design-course",
+    "Hybrid Electric Vehicle": "/hybrid-electric-vehicle-course",
+    "Construction Planning": "/construction-planning-course",
+    "Embedded Systems": "/embedded-systems-course",
+    "IoT & Robotics": "/iot-robotics-course",
+    "VLSI": "/vlsi-course",
+    "Internet of Things": "/iot-robotics-course",
+    "Genetic Engineering": "/genetic-engineering-course",
+    "Molecular Biology": "/molecular-biology-course",
+    "Microbiology": "/microbiology-course",
+    "Nano Technology": "/nano-technology-course",
+    "Finance": "/finance-course",
+    "Digital Marketing": "/digital-marketing-course",
+    "Human Resource": "/human-resource-course",
+    "Stock Market": "/stock-market-course",
+  }
+  return urlMap[courseName] || "#"
+}
+
 const domains = [
   {
     name: "Computer Science",
@@ -73,28 +102,29 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-[#1a1a2e]">
-              Bireena<span className="text-[#e85a4f]"> Edutech</span>
+            <span className="text-2xl font-bold">
+              <span className="text-gray-800">Launch</span>
+              <span className="text-[#ff6b4a]">ed</span>
             </span>
-            <span className="text-[#e85a4f] text-2xl ml-1">✦</span>
+            <span className="text-[#ff6b4a] text-2xl ml-1">🚀</span>
           </Link>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link href="#" className="text-[#e85a4f] font-medium hover:text-[#d14940] transition-colors">
+            <Link href="#" className="text-gray-700 font-medium hover:text-[#ff6b4a] transition-colors">
               Placement Accelerator
             </Link>
 
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className={`flex items-center gap-1 font-medium transition-colors px-4 py-2 rounded-full border ${
+                className={`flex items-center gap-1 font-medium transition-colors ${
                   isDropdownOpen
-                    ? "border-[#1a1a2e] text-[#1a1a2e]"
-                    : "border-transparent text-[#1a1a2e] hover:text-[#e85a4f]"
+                    ? "text-gray-900"
+                    : "text-gray-700 hover:text-[#ff6b4a]"
                 }`}
               >
                 Career Launchpad
@@ -140,7 +170,8 @@ export function Header() {
                         {activeCourses.map((course) => (
                           <Link
                             key={course.name}
-                            href="#"
+                            href={getCourseUrl(course.name)}
+                            onClick={() => setIsDropdownOpen(false)}
                             className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
                           >
                             <img
@@ -171,15 +202,15 @@ export function Header() {
               )}
             </div>
 
-            <Link href="#" className="text-[#1a1a2e] font-medium hover:text-[#e85a4f] transition-colors">
+            <Link href="#" className="text-gray-700 font-medium hover:text-[#ff6b4a] transition-colors">
               Study Abroad
             </Link>
 
-            <Link href="#" className="text-[#1a1a2e] font-medium hover:text-[#e85a4f] transition-colors">
+            <Link href="#" className="text-gray-700 font-medium hover:text-[#ff6b4a] transition-colors">
               Campus Ambassador
             </Link>
 
-            <Link href="#" className="text-[#1a1a2e] font-medium hover:text-[#e85a4f] transition-colors">
+            <Link href="#" className="text-gray-700 font-medium hover:text-[#ff6b4a] transition-colors">
               Contact Us
             </Link>
           </nav>
@@ -188,13 +219,13 @@ export function Header() {
           <div className="flex items-center gap-3">
             <Link
               href="#"
-              className="hidden sm:inline-flex px-4 py-2 bg-[#e85a4f] text-white font-medium rounded-lg hover:bg-[#d14940] transition-colors"
+              className="hidden sm:inline-flex px-5 py-2 bg-[#ff6b4a] text-white font-medium rounded-md hover:bg-[#ff5533] transition-colors text-sm"
             >
               LMS Log In
             </Link>
             <Link
               href="#"
-              className="hidden sm:inline-flex px-4 py-2 border-2 border-[#e85a4f] text-[#e85a4f] font-medium rounded-lg hover:bg-[#e85a4f] hover:text-white transition-colors"
+              className="hidden sm:inline-flex px-5 py-2 bg-[#ff6b4a] text-white font-medium rounded-md hover:bg-[#ff5533] transition-colors text-sm"
             >
               LMS Log In 2.0
             </Link>
