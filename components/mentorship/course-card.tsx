@@ -18,7 +18,7 @@ function getCourseRoute(title: string): string {
     "Web Development": "/web-development-course",
     "Python with Machine Learning": "/machine-learning-course",
     "Artificial Intelligence": "/ai-automation-courses",
-    "Python with Data Science": "/machine-learning-course",
+    "Python with Data Science": "/data-science-course",
     "App Development": "/app-development-course-online",
     "Cyber Security": "/cyber-security-course",
     "Cloud Computing (Azure, AWS)": "/cloud-computing-course",
@@ -51,20 +51,20 @@ export function CourseCard({ course }: { course: Course }) {
   const courseRoute = getCourseRoute(course.title)
 
   return (
-    <div className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
-      <div className="aspect-[4/3] overflow-hidden">
+    <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
+      <div className="aspect-[4/3] overflow-hidden bg-gray-100">
         <img
           src={course.image || "/placeholder.svg"}
           alt={course.title}
-          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+          className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
         />
       </div>
 
-      <div className="p-4">
+      <div className="p-5">
         {/* Rating */}
-        <div className="flex items-center gap-2 mb-2">
-          <span className="text-sm font-semibold text-[#1a1a2e]">{course.rating}</span>
-          <div className="flex">
+        <div className="flex items-center gap-2 mb-3">
+          <span className="text-sm font-bold text-[#1a1a2e]">{course.rating}</span>
+          <div className="flex gap-0.5">
             {[...Array(5)].map((_, i) => (
               <Star
                 key={i}
@@ -78,22 +78,22 @@ export function CourseCard({ course }: { course: Course }) {
               />
             ))}
           </div>
-          <span className="text-sm text-gray-500">({course.reviews.toLocaleString()})</span>
+          <span className="text-xs text-gray-500">({course.reviews.toLocaleString()})</span>
         </div>
 
         {/* Title */}
-        <h3 className="font-bold text-[#1a1a2e] mb-2">{course.title}</h3>
+        <h3 className="font-bold text-[#1a1a2e] mb-3 text-lg leading-snug">{course.title}</h3>
 
         {/* Description */}
-        <p className="text-sm text-gray-600 mb-4 line-clamp-2">{course.description}</p>
+        <p className="text-sm text-gray-600 mb-5 line-clamp-3 leading-relaxed">{course.description}</p>
 
         {/* Buttons */}
-        <div className="flex gap-2">
+        <div className="flex gap-3">
           <Link href={courseRoute} className="flex-1">
-            <Button className="w-full bg-[#e85a4f] hover:bg-[#d14940] text-white text-sm">Register Now</Button>
+            <Button className="w-full bg-[#FF6B4A] hover:bg-[#e85a4f] text-white text-sm py-3 rounded-lg shadow-sm">Register Now</Button>
           </Link>
           <Link href={courseRoute} className="flex-1">
-            <Button variant="outline" className="w-full border-gray-300 text-[#1a1a2e] text-sm bg-transparent">
+            <Button variant="outline" className="w-full border border-gray-300 text-gray-700 hover:bg-gray-50 text-sm py-3 rounded-lg bg-white">
               View Course
             </Button>
           </Link>

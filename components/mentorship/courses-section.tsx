@@ -24,7 +24,7 @@ const allCourses = {
       reviews: 1897,
       description:
         "Whether you want to streamline workflows, build call agents, or launch your own automation-based startup, this course gives...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/ai-automation-futuristic-blue-technology-interface.jpg",
     },
     {
       id: 2,
@@ -33,16 +33,16 @@ const allCourses = {
       reviews: 3897,
       description:
         "Web Development focuses on designing and building websites using modern technologies. Learn to create responsive, user-...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/mobile-app-development-smartphone-interface.jpg",
     },
     {
       id: 3,
-      title: "Artificial Intelligence",
-      rating: 4.7,
-      reviews: 4143,
+      title: "Python with Machine Learning",
+      rating: 4.4,
+      reviews: 2376,
       description:
-        "Artificial Intelligence focuses on creating smart systems that mimic human intelligence. Dive into neural networks, deep...",
-      image: "/placeholder.svg?height=200&width=300",
+        "Machine Learning combines programming and AI to develop intelligent systems. Master Python libraries and algorithms to...",
+      image: "/python-programming-code-on-laptop-screen.jpg",
     },
     {
       id: 4,
@@ -51,7 +51,7 @@ const allCourses = {
       reviews: 2465,
       description:
         "Data Science blends programming with analytical skills to extract insights from data. Learn to manipulate, visualize, and...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/data-science-analytics-charts-graphs-visualization.jpg",
     },
   ],
   popular: [
@@ -62,7 +62,7 @@ const allCourses = {
       reviews: 1897,
       description:
         "Whether you want to streamline workflows, build call agents, or launch your own automation-based startup, this course gives...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/ai-automation-futuristic-blue-technology-interface.jpg",
     },
     {
       id: 2,
@@ -71,7 +71,7 @@ const allCourses = {
       reviews: 1675,
       description:
         "Cyber Security focuses on protecting systems from digital threats. Gain expertise in encryption, network security, and...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/cyber-security-lock.jpg",
     },
     {
       id: 3,
@@ -80,7 +80,7 @@ const allCourses = {
       reviews: 922,
       description:
         "Cloud Computing leverages remote servers to store, manage, and process data. Master Azure and AWS platforms...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/cloud-computing-azure-aws.jpg",
     },
     {
       id: 4,
@@ -89,7 +89,7 @@ const allCourses = {
       reviews: 1199,
       description:
         "Digital Marketing builds brands online. Learn SEO, social media, and analytics to create impactful campaigns and drive business...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/digital-marketing-strategy.png",
     },
   ],
   cs: [
@@ -100,7 +100,7 @@ const allCourses = {
       reviews: 3897,
       description:
         "Web Development focuses on designing and building websites using modern technologies. Learn to create responsive, user-...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/web-development-coding.png",
     },
     {
       id: 2,
@@ -109,7 +109,7 @@ const allCourses = {
       reviews: 2376,
       description:
         "Machine Learning combines programming and AI to develop intelligent systems. Master Python libraries and algorithms to...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/python-machine-learning.jpg",
     },
     {
       id: 3,
@@ -118,7 +118,7 @@ const allCourses = {
       reviews: 2465,
       description:
         "Data Science blends programming with analytical skills to extract insights from data. Learn to manipulate, visualize, and...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/data-science-analytics.jpg",
     },
     {
       id: 4,
@@ -127,7 +127,7 @@ const allCourses = {
       reviews: 4143,
       description:
         "Artificial Intelligence focuses on creating smart systems that mimic human intelligence. Dive into neural networks, deep...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/artificial-intelligence-brain.jpg",
     },
     {
       id: 5,
@@ -136,7 +136,7 @@ const allCourses = {
       reviews: 1675,
       description:
         "Cyber Security focuses on protecting systems from digital threats. Gain expertise in encryption, network security, and...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/cyber-security-lock.jpg",
     },
     {
       id: 6,
@@ -145,7 +145,7 @@ const allCourses = {
       reviews: 922,
       description:
         "Cloud Computing leverages remote servers to store, manage, and process data. Master Azure and AWS platforms...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/cloud-computing-azure-aws.jpg",
     },
     {
       id: 7,
@@ -154,7 +154,7 @@ const allCourses = {
       reviews: 874,
       description:
         "App Development focuses on creating mobile applications for Android devices. Learn to design, develop, and deploy...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/mobile-app-development-smartphone-interface.jpg",
     },
   ],
   ee: [
@@ -165,7 +165,7 @@ const allCourses = {
       reviews: 900,
       description:
         "Embedded Systems combine software and hardware for specialized applications. Gain expertise in microcontrollers and...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/embedded-systems-circuit.jpg",
     },
     {
       id: 2,
@@ -174,7 +174,7 @@ const allCourses = {
       reviews: 851,
       description:
         "Hybrid Electric Vehicles focus on eco-friendly automotive technology. Learn about electric motors, batteries, and energy...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/futuristic-electric-vehicle.png",
     },
     {
       id: 3,
@@ -183,7 +183,7 @@ const allCourses = {
       reviews: 969,
       description:
         "Internet of Things connects devices to create smarter systems. Learn to develop IoT solutions that enhance connectivity...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/internet-of-things-sensors.jpg",
     },
     {
       id: 4,
@@ -192,7 +192,7 @@ const allCourses = {
       reviews: 1010,
       description:
         "Robotics involves designing machines to automate tasks. Explore mechanical systems, programming, and AI to build and...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/iot-robotics.jpg",
     },
     {
       id: 5,
@@ -201,7 +201,7 @@ const allCourses = {
       reviews: 969,
       description:
         "Explore the intersection of IoT and Robotics—develop smart, connected systems that automate tasks and enhance...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/iot-robotics.jpg",
     },
     {
       id: 6,
@@ -210,7 +210,7 @@ const allCourses = {
       reviews: 1073,
       description:
         "Very Large Scale Integration (VLSI) focuses on chip design for electronics. Master circuit design techniques for...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/vlsi-chip-design.jpg",
     },
   ],
   mech: [
@@ -221,7 +221,7 @@ const allCourses = {
       reviews: 851,
       description:
         "Hybrid Electric Vehicles focus on eco-friendly automotive technology. Learn about electric motors, batteries, and energy...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/futuristic-electric-vehicle.png",
     },
     {
       id: 2,
@@ -230,7 +230,7 @@ const allCourses = {
       reviews: 969,
       description:
         "Explore the intersection of IoT and Robotics—develop smart, connected systems that automate tasks and enhance...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/iot-robotics.jpg",
     },
     {
       id: 3,
@@ -239,7 +239,7 @@ const allCourses = {
       reviews: 1073,
       description:
         "Very Large Scale Integration (VLSI) focuses on chip design for electronics. Master circuit design techniques for...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/vlsi-chip-design.jpg",
     },
     {
       id: 4,
@@ -248,7 +248,7 @@ const allCourses = {
       reviews: 1107,
       description:
         "Car Design blends creativity and engineering to create futuristic vehicles. Learn the art of automotive design and...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/car-design-automotive.jpg",
     },
     {
       id: 5,
@@ -257,7 +257,7 @@ const allCourses = {
       reviews: 1127,
       description:
         "AutoCAD is a key tool for drafting and designing. Master its functionalities to create detailed technical drawings...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/autocad-design.jpg",
     },
     {
       id: 6,
@@ -266,7 +266,7 @@ const allCourses = {
       reviews: 824,
       description:
         "Construction Planning focuses on efficient project execution. Learn to manage timelines, resources, and structural...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/construction-planning.png",
     },
   ],
   bio: [
@@ -277,7 +277,7 @@ const allCourses = {
       reviews: 853,
       description:
         "Nano Technology explores materials at the molecular level. Learn to innovate in medicine, electronics, and materials...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/nano-technology.jpg",
     },
     {
       id: 2,
@@ -286,7 +286,7 @@ const allCourses = {
       reviews: 843,
       description:
         "Genetic Engineering modifies DNA for better outcomes. Learn the science behind CRISPR, gene therapy, and bio...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/genetic-engineering-dna.jpg",
     },
     {
       id: 3,
@@ -295,7 +295,7 @@ const allCourses = {
       reviews: 1080,
       description:
         "Molecular Biology studies the building blocks of life. Explore DNA, RNA, and proteins to understand cellular processes...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/molecular-biology.jpg",
     },
     {
       id: 4,
@@ -304,7 +304,7 @@ const allCourses = {
       reviews: 1138,
       description:
         "Microbiology examines microorganisms that impact life. Learn about bacteria, viruses, and fungi in health and...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/microbiology-lab.jpg",
     },
     {
       id: 5,
@@ -313,7 +313,7 @@ const allCourses = {
       reviews: 996,
       description:
         "Bioinformatics merges biology with technology. Learn to analyze genetic data and develop tools for biological research...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/bioinformatics-dna-code.jpg",
     },
   ],
   mgmt: [
@@ -324,7 +324,7 @@ const allCourses = {
       reviews: 1675,
       description:
         "Finance focuses on managing money and investments. Learn the principles of budgeting, risk assessment, and financial...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/finance-money.jpg",
     },
     {
       id: 2,
@@ -333,7 +333,7 @@ const allCourses = {
       reviews: 1199,
       description:
         "Digital Marketing builds brands online. Learn SEO, social media, and analytics to create impactful campaigns and drive business...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/digital-marketing-strategy.png",
     },
     {
       id: 3,
@@ -342,7 +342,7 @@ const allCourses = {
       reviews: 1543,
       description:
         "Human Resource focuses on managing workplace talent. Learn recruitment, employee engagement, and organizational behavior...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/human-resource-management.jpg",
     },
     {
       id: 4,
@@ -351,7 +351,7 @@ const allCourses = {
       reviews: 997,
       description:
         "The Stock Market focuses on trading and investments. Learn market analysis, portfolio management, and strategies for long...",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/stock-market-trading.jpg",
     },
   ],
 }
@@ -378,45 +378,47 @@ export function CoursesSection() {
   }, [activeCategory, searchQuery])
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 w-full">
-      <h2 className="text-4xl font-bold text-center text-[#1a1a2e] mb-12">Courses Available</h2>
+    <section className="py-8 sm:py-10 lg:py-12">
+      <div className="max-w-[1440px] mx-auto px-3 sm:px-4 lg:px-6">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-[#1a1a2e] mb-6 sm:mb-8 lg:mb-10">Courses Available</h2>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-        {categories.map((category) => (
-          <button
-            key={category.key}
-            onClick={() => setActiveCategory(category.key)}
-            className={`flex items-center justify-center gap-2 px-4 py-4 rounded-xl border transition-all ${
-              category.highlight
-                ? "bg-[#e85a4f]/10 text-[#e85a4f] border-[#e85a4f]/30 hover:bg-[#e85a4f] hover:text-white"
-                : activeCategory === category.key
-                  ? "bg-[#e85a4f] text-white border-[#e85a4f]"
-                  : "border-gray-200 text-[#1a1a2e] hover:border-[#e85a4f]"
-            }`}
-          >
-            <category.icon className={`h-5 w-5 ${activeCategory === category.key ? "text-white" : category.color}`} />
-            <span className="font-medium">{category.label}</span>
-          </button>
-        ))}
-      </div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
+          {categories.map((category) => (
+            <button
+              key={category.key}
+              onClick={() => setActiveCategory(category.key)}
+              className={`flex items-center justify-center gap-2 px-6 py-4 rounded-xl transition-all ${
+                category.highlight
+                  ? "bg-[#FF6B4A]/10 text-[#FF6B4A] hover:bg-[#FF6B4A]/20"
+                  : activeCategory === category.key
+                    ? "bg-[#FF6B4A] text-white shadow-md"
+                    : "bg-gray-50 text-gray-700 hover:bg-gray-100 border border-gray-200"
+              }`}
+            >
+              <category.icon className={`h-5 w-5 ${activeCategory === category.key ? "text-white" : category.color}`} />
+              <span className="text-sm lg:text-base font-medium">{category.label}</span>
+            </button>
+          ))}
+        </div>
 
-      {/* Search Bar */}
-      <div className="relative mb-12">
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
-        <input
-          type="text"
-          placeholder="🔍 Search courses, topics, or skills..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl focus:outline-none focus:border-[#e85a4f] text-gray-600"
-        />
-      </div>
+        {/* Search Bar */}
+        <div className="relative mb-10">
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
+          <input
+            type="text"
+            placeholder="🔍 Search courses, topics, or skills..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full pl-12 pr-4 py-3.5 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6B4A]/20 focus:border-[#FF6B4A] text-gray-700 text-sm transition-all"
+          />
+        </div>
 
-      {/* Course Grid */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {displayedCourses.map((course, index) => (
-          <CourseCard key={`${course.id}-${index}`} course={course} />
-        ))}
+        {/* Course Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+          {displayedCourses.map((course, index) => (
+            <CourseCard key={`${course.id}-${index}`} course={course} />
+          ))}
+        </div>
       </div>
     </section>
   )

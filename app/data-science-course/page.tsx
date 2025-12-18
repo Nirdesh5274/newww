@@ -3,7 +3,7 @@
 import { Header } from "@/components/mentorship/header"
 import { Footer } from "@/components/mentorship/footer"
 import { Button } from "@/components/mentorship/button"
-import { Check, Clock, Users, Award, BookOpen, Network, FileText, Shield, ChevronDown, Play } from "lucide-react"
+import { Check, Clock, Users, Award, BookOpen, Network, FileText, Shield, ChevronDown, Play, Code2 } from "lucide-react"
 import Link from "next/link"
 import { StatsSection } from "@/components/mentorship/stats-section"
 import { useState } from "react"
@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "Who is this course for?",
     answer:
-      "This course is perfect for beginners, working professionals, and anyone interested in AI Automation. Whether you want to automate workflows or build intelligent systems, this course will guide you.",
+      "This course is perfect for beginners, aspiring data scientists, and anyone interested in data analytics. Whether you want to analyze data or start a career as a data scientist, this course will guide you.",
   },
   {
     question: "How does the mentorship work?",
@@ -22,16 +22,16 @@ const faqs = [
   {
     question: "What projects will I work on?",
     answer:
-      "You'll work on 10+ live projects including intelligent chatbots, automation systems, workflow design, and real-world AI applications that solve business challenges.",
+      "You'll work on 10+ live projects including data analysis, predictive modeling, data visualization, and real-world applications that solve business challenges.",
   },
   {
-    question: "What kind of job support is supported?",
+    question: "What kind of job support is provided?",
     answer:
       "We provide resume building, mock interviews, industry networking opportunities, and connections with 100+ partner companies for placement assistance.",
   },
 ]
 
-export default function FinanceCoursePage() {
+export default function DataScienceCoursePage() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
@@ -43,10 +43,10 @@ export default function FinanceCoursePage() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-5xl font-bold text-[#1a1a2e] mb-6">
-              Master Finance with Personalized Mentorship
+              Master Python with Data Science through Personalized Mentorship
             </h1>
             <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-              This hands-on course is designed to equip you with the skills to manage money and investments — from financial analysis to investment strategies that drive business success.
+              This hands-on course is designed to equip you with the skills to analyze data and build powerful data-driven solutions — from data visualization to predictive analytics that solve real business challenges.
             </p>
             
             {/* Pricing Cards */}
@@ -62,8 +62,8 @@ export default function FinanceCoursePage() {
                     <img src="/placeholder.svg?height=40&width=40" alt="Mentor" className="w-10 h-10 rounded-full" />
                   </div>
                   <div className="text-sm">
-                    <div className="font-semibold text-[#1a1a2e]">Kartikal Sharma</div>
-                    <div className="text-gray-500 text-xs">Founder, Moody Design</div>
+                    <div className="font-semibold text-[#1a1a2e]">Dr. Priya Sharma</div>
+                    <div className="text-gray-500 text-xs">Data Science Lead, TechCorp</div>
                   </div>
                 </div>
                 <Button className="w-full bg-[#e85a4f] hover:bg-[#d04943] text-white">
@@ -86,18 +86,18 @@ export default function FinanceCoursePage() {
 
           {/* Video Preview */}
           <div className="relative">
-            <div className="relative w-full aspect-video bg-gradient-to-br from-orange-100 to-orange-50 rounded-2xl overflow-hidden">
+            <div className="relative w-full aspect-video bg-gradient-to-br from-blue-100 to-blue-50 rounded-2xl overflow-hidden">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="relative">
-                  <img src="/placeholder.svg?height=400&width=600" alt="Course Preview" className="w-full h-full object-cover rounded-2xl" />
+                  <img src="/data-science-analytics.jpg" alt="Course Preview" className="w-full h-full object-cover rounded-2xl" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg cursor-pointer hover:scale-110 transition-transform">
                       <Play className="h-8 w-8 text-[#e85a4f] ml-1" fill="currentColor" />
                     </div>
                   </div>
-                  {/* Artificial Intelligence Badge */}
+                  {/* Course Badge */}
                   <div className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-[#e85a4f] text-white px-6 py-2 rounded-full text-sm font-semibold">
-                    Finance
+                    Python with Data Science
                   </div>
                   {/* Search Icon */}
                   <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm p-2 rounded-lg">
@@ -157,7 +157,7 @@ export default function FinanceCoursePage() {
               12++ Hours of Live & Recorded Sessions
             </h3>
             <p className="text-gray-600 mb-4">
-              Learn from top AI Automation professionals with comprehensive sessions covering all essential concepts and techniques.
+              Learn from top Data Science professionals with comprehensive sessions covering all essential concepts and techniques.
             </p>
             <ul className="space-y-2">
               <li className="flex items-start gap-2">
@@ -184,7 +184,7 @@ export default function FinanceCoursePage() {
               Personalized Mentor
             </h3>
             <p className="text-gray-600 mb-4">
-              Get personalised guidance throughout your AI Automation journey with tailored feedback and mentoring.
+              Get personalised guidance throughout your Data Science journey with tailored feedback and mentoring.
             </p>
             <ul className="space-y-2">
               <li className="flex items-start gap-2">
@@ -211,12 +211,12 @@ export default function FinanceCoursePage() {
               10+ Live Projects & 1 Capstone Project
             </h3>
             <p className="text-gray-600 mb-4">
-              Gain hands-on experience by working on real-world AI Automation projects with practical applications.
+              Gain hands-on experience by working on real-world Data Science projects with practical applications.
             </p>
             <ul className="space-y-2">
               <li className="flex items-start gap-2">
                 <Check className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-gray-600">Industry-relevant classes</span>
+                <span className="text-sm text-gray-600">Industry-relevant projects</span>
               </li>
               <li className="flex items-start gap-2">
                 <Check className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
@@ -314,7 +314,7 @@ export default function FinanceCoursePage() {
         {/* Enroll Button */}
         <div className="flex justify-center mt-12">
           <Button className="bg-[#FF6B4A] hover:bg-[#e85a4f] text-white px-10 py-4 text-base rounded-lg shadow-md font-semibold">
-            Enroll Now & Start Your Finance Journey
+            Enroll Now & Start Your Data Science Journey
           </Button>
         </div>
       </section>
@@ -324,31 +324,31 @@ export default function FinanceCoursePage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <img src="/placeholder.svg?height=400&width=600" alt="Curriculum" className="rounded-2xl" />
+              <img src="/data-science-analytics-charts-graphs-visualization.jpg" alt="Curriculum" className="rounded-2xl" />
             </div>
             <div>
               <h2 className="text-4xl font-bold mb-6">
-                Comprehensive Finance Curriculum
+                Comprehensive Data Science Curriculum
               </h2>
               <p className="text-gray-300 mb-8">
-                Our curriculum is designed to take you from basics to advanced finance concepts with practical applications in financial planning, investment analysis, and portfolio management.
+                Our curriculum is designed to take you from basics to advanced data science concepts with practical applications in Python, Pandas, NumPy, Machine Learning, and more.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div>
                   <Check className="h-6 w-6 text-[#e85a4f] mb-2" />
-                  <div className="font-semibold">Financial Analysis</div>
+                  <div className="font-semibold">Python Programming</div>
                 </div>
                 <div>
                   <Check className="h-6 w-6 text-[#e85a4f] mb-2" />
-                  <div className="font-semibold">Investment Strategy</div>
+                  <div className="font-semibold">Data Analysis</div>
                 </div>
                 <div>
                   <Check className="h-6 w-6 text-[#e85a4f] mb-2" />
-                  <div className="font-semibold">Portfolio Management</div>
+                  <div className="font-semibold">Data Visualization</div>
                 </div>
                 <div>
                   <Check className="h-6 w-6 text-[#e85a4f] mb-2" />
-                  <div className="font-semibold">Risk Management</div>
+                  <div className="font-semibold">Machine Learning</div>
                 </div>
               </div>
               <Button className="bg-[#e85a4f] hover:bg-[#d04943] text-white mt-8 px-8 py-6 text-lg w-full">
@@ -365,7 +365,7 @@ export default function FinanceCoursePage() {
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-[#1a1a2e] mb-4">
-          Ready to Transform Your AI Automation Career?
+          Ready to Transform Your Data Science Career?
         </h2>
         <Button className="bg-[#e85a4f] hover:bg-[#d04943] text-white px-8 py-4 text-lg mt-6">
           Get Started Today
@@ -373,61 +373,72 @@ export default function FinanceCoursePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1a1a2e] overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black text-white overflow-hidden">
+        <div className="w-full">
           <h2 className="text-4xl font-bold text-center mb-12">
             Loved by thousands of students
           </h2>
           
           <div className="overflow-hidden">
             <div className="flex gap-6 animate-scroll" style={{width: 'max-content'}}>
-            {[
-              {
-                name: "Megha T",
-                role: "AI Automation Graduate",
-                text: "Launched's AI Automation program helped me streamline workflows and boost efficiency. I now lead automation projects at my company."
-              },
-              {
-                name: "Rohan S",
-                role: "AI Automation Graduate",
-                text: "This course taught me to implement RPA bots in real business settings. I now automate repetitive tasks for my entire team."
-              },
-              {
-                name: "Prathap R",
-                role: "AI Automation Graduate",
-                text: "The mentorship and real-world projects gave me confidence to drive automation in my operations team. The ROI was immediate."
-              },
-              {
-                name: "Ankita M",
-                role: "AI Automation Graduate",
-                text: "From Python scripting to AI tools, the program was very hands-on. I now work in process automation at a global MNC."
-              },
-              {
-                name: "Kunal V",
-                role: "AI Automation Graduate",
-                text: "We learned to integrate AI with business logic using tools like UiPath and Python. I'm now automating invoice and data workflows."
-              },
-              {
-                name: "Rohan S",
-                role: "AI Automation Graduate",
-                text: "This course taught me to implement RPA bots in real business settings. I now automate repetitive tasks for my entire team."
-              }
-            ].map((testimonial, index) => (
-              <div key={index} className="w-[380px] flex-shrink-0 bg-[#2a2a3e] p-6 rounded-2xl hover:bg-[#3a3a4e] transition-colors">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center text-white font-bold">
-                    {testimonial.name.charAt(0)}
+              {[
+                {
+                  name: "Ananya K",
+                  role: "Data Science Graduate",
+                  text: "Launched's Data Science program helped me master Python and analytics. I now work as a data analyst at a top firm."
+                },
+                {
+                  name: "Rahul M",
+                  role: "Data Science Graduate",
+                  text: "This course taught me to extract insights from complex datasets. I now build data-driven solutions professionally."
+                },
+                {
+                  name: "Sneha P",
+                  role: "Data Science Graduate",
+                  text: "The mentorship and real-world projects gave me confidence to become a data scientist. The portfolio was a game-changer."
+                },
+                {
+                  name: "Vikram S",
+                  role: "Data Science Graduate",
+                  text: "From Python to Machine Learning, the program was very hands-on. I now work in data science at a global company."
+                },
+                {
+                  name: "Divya R",
+                  role: "Data Science Graduate",
+                  text: "We learned to analyze data and build predictive models. I'm now creating data solutions professionally."
+                },
+                {
+                  name: "Amit T",
+                  role: "Data Science Graduate",
+                  text: "This course taught me everything about data science. I now freelance and help businesses with data analytics."
+                },
+                // Duplicate for smooth infinite scroll
+                {
+                  name: "Ananya K",
+                  role: "Data Science Graduate",
+                  text: "Launched's Data Science program helped me master Python and analytics. I now work as a data analyst at a top firm."
+                },
+                {
+                  name: "Rahul M",
+                  role: "Data Science Graduate",
+                  text: "This course taught me to extract insights from complex datasets. I now build data-driven solutions professionally."
+                },
+              ].map((testimonial, index) => (
+                <div key={index} className="w-[380px] flex-shrink-0 bg-[#1a1a2e] p-6 rounded-2xl hover:bg-[#2a2a3e] transition-colors">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center text-white font-bold">
+                      {testimonial.name.charAt(0)}
+                    </div>
+                    <div>
+                      <div className="font-semibold">{testimonial.name}</div>
+                      <div className="text-sm text-gray-400">{testimonial.role}</div>
+                    </div>
                   </div>
-                  <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}</div>
-                  </div>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {testimonial.text}
+                  </p>
                 </div>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {testimonial.text}
-                </p>
-              </div>
-            ))}
+              ))}
             </div>
           </div>
         </div>
@@ -440,7 +451,7 @@ export default function FinanceCoursePage() {
             Simple, Transparent Pricing
           </h2>
           <p className="text-center text-gray-600 mb-12">
-            Invest in your AI Automation career with our comprehensive mentor-led program
+            Invest in your Data Science career with our comprehensive mentor-led program
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -448,7 +459,7 @@ export default function FinanceCoursePage() {
             <div className="bg-black text-white rounded-3xl p-8 border-4 border-[#e85a4f]">
               <div className="flex justify-between items-start mb-6">
                 <div>
-                  <h3 className="text-2xl font-bold mb-2">FINANCE</h3>
+                  <h3 className="text-2xl font-bold mb-2">PYTHON WITH DATA SCIENCE</h3>
                   <p className="text-gray-400">MENTOR-LED PROGRAM</p>
                 </div>
                 <div className="bg-[#e85a4f] text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -474,7 +485,7 @@ export default function FinanceCoursePage() {
                     <Check className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                     <div>
                       <div className="font-medium">25+ Hours of Live & Recorded Sessions</div>
-                      <div className="text-sm text-gray-400">Learn from top AI Automation professionals at your own pace</div>
+                      <div className="text-sm text-gray-400">Learn from top Data Science professionals at your own pace</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -488,7 +499,7 @@ export default function FinanceCoursePage() {
                     <Check className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                     <div>
                       <div className="font-medium">10+ Live Projects & 1 Capstone Project</div>
-                      <div className="text-sm text-gray-400">Build your portfolio with real-world AI Automation applications</div>
+                      <div className="text-sm text-gray-400">Build your portfolio with real-world data science projects</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -502,7 +513,7 @@ export default function FinanceCoursePage() {
                     <Check className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                     <div>
                       <div className="font-medium">Industry Networking Opportunities</div>
-                      <div className="text-sm text-gray-400">Connect with AI Automation leaders and potential employers</div>
+                      <div className="text-sm text-gray-400">Connect with Data Science leaders and potential employers</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -543,7 +554,7 @@ export default function FinanceCoursePage() {
             <div className="bg-white rounded-3xl p-8 border-2 border-gray-200">
               <div className="flex justify-between items-start mb-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-[#1a1a2e] mb-2">AI AUTOMATION</h3>
+                  <h3 className="text-2xl font-bold text-[#1a1a2e] mb-2">PYTHON WITH DATA SCIENCE</h3>
                   <p className="text-gray-600">BLENDED PROGRAM</p>
                 </div>
                 <div className="bg-[#e85a4f] text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -569,7 +580,7 @@ export default function FinanceCoursePage() {
                     <Check className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                     <div>
                       <div className="font-medium text-[#1a1a2e]">15+ Hours of Live & Recorded Sessions</div>
-                      <div className="text-sm text-gray-600">Learn from top AI Automation professionals at your own pace</div>
+                      <div className="text-sm text-gray-600">Learn from top Data Science professionals at your own pace</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -583,7 +594,7 @@ export default function FinanceCoursePage() {
                     <Check className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                     <div>
                       <div className="font-medium text-[#1a1a2e]">10+ Live Projects & 1 Capstone Project</div>
-                      <div className="text-sm text-gray-600">Build your portfolio with real-world AI Automation applications</div>
+                      <div className="text-sm text-gray-600">Build your portfolio with real-world data science projects</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -597,7 +608,7 @@ export default function FinanceCoursePage() {
                     <Check className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                     <div>
                       <div className="font-medium text-[#1a1a2e]">Industry Networking Opportunities</div>
-                      <div className="text-sm text-gray-600">Connect with AI Automation leaders and potential employers</div>
+                      <div className="text-sm text-gray-600">Connect with Data Science leaders and potential employers</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -640,7 +651,7 @@ export default function FinanceCoursePage() {
       {/* FAQ Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <h2 className="text-3xl lg:text-4xl font-bold text-center text-[#1a1a2e] mb-3">Frequently Asked Questions</h2>
-        <p className="text-center text-gray-500 text-sm mb-10">Everything you need to know about our Finance Mentor-Led Course</p>
+        <p className="text-center text-gray-500 text-sm mb-10">Everything you need to know about our Data Science Mentor-Led Course</p>
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
@@ -651,11 +662,13 @@ export default function FinanceCoursePage() {
             }`}>
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between p-5 text-left transition-colors"
+                className="w-full flex items-center justify-between p-5 text-left"
               >
                 <span className="text-lg lg:text-xl font-normal text-[#1a1a2e] pr-4">{faq.question}</span>
                 <ChevronDown
-                  className={`h-5 w-5 flex-shrink-0 transition-transform ${openIndex === index ? "rotate-180 text-[#FF6B4A]" : "text-gray-500"}`}
+                  className={`h-5 w-5 flex-shrink-0 transition-all ${
+                    openIndex === index ? "rotate-180 text-[#FF6B4A]" : "text-gray-400"
+                  }`}
                 />
               </button>
               {openIndex === index && (
@@ -678,5 +691,3 @@ export default function FinanceCoursePage() {
     </main>
   )
 }
-
-

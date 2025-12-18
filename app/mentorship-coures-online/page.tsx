@@ -18,10 +18,10 @@ export default function MentorshipCoursesPage() {
       <HeroSection />
       <CoursesSection />
       <CourseFeatures />
-      <StatsSection />
-      <CTASection />
       <CompaniesSection />
       <MentorsSection />
+      <StatsSection />
+      <CTASection />
       <TestimonialsSection />
       <FAQSection />
       <QuickApplyForm />
