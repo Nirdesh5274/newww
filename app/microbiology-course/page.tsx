@@ -373,8 +373,8 @@ export default function MicrobiologyCoursePage() {
 
       {/* FAQ Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-[#1a1a2e] mb-4">Frequently Asked Questions</h2>
-        <p className="text-center text-gray-600 mb-12">Everything you need to know about our Microbiology Mentor-Led Course</p>
+        <h2 className="text-3xl lg:text-4xl font-bold text-center text-[#1a1a2e] mb-3">Frequently Asked Questions</h2>
+        <p className="text-center text-gray-500 text-sm mb-10">Everything you need to know about our Microbiology Mentor-Led Course</p>
         <div className="space-y-4">
           {[
             {
@@ -394,11 +394,18 @@ export default function MicrobiologyCoursePage() {
               a: "Yes! The mentor-led course includes dedicated placement support, resume review, and interview preparation for semiconductor companies.",
             },
           ].map((faq, index) => (
-            <div key={index} className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-semibold text-[#1a1a2e] mb-2">{faq.q}</h3>
-              <p className="text-gray-600">{faq.a}</p>
+            <div key={index} className="rounded-xl shadow-sm transition-all duration-300 cursor-pointer border overflow-hidden hover:shadow-md hover:border-[#FF6B4A]/30 bg-white border-gray-200">
+              <div className="p-5">
+                <h3 className="text-lg lg:text-xl font-normal text-[#1a1a2e] mb-2">{faq.q}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
+              </div>
             </div>
           ))}
+        </div>
+        <div className="text-center mt-10">
+          <Link href="/contact" className="inline-block bg-[#FF6B4A] hover:bg-[#e85a4f] text-white px-8 py-3 text-sm rounded-lg shadow-md transition-colors">
+            Contact Us
+          </Link>
         </div>
       </section>
 

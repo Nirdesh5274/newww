@@ -11,6 +11,14 @@ export const metadata: Metadata = {
   title: "Career Launchpad - Mentorship Courses Online | Launched Global",
   description:
     "Step into a world where learning meets guidance. Our training and mentorship program empowers you to master the skills that matter.",
+  icons: {
+    icon: [
+      {
+        url: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>",
+        type: "image/svg+xml",
+      },
+    ],
+  },
 }
 
 export default function RootLayout({

@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { ChevronDown, ChevronRight } from "lucide-react"
+import { ChevronDown, ChevronRight, Menu, X } from "lucide-react"
 import { useState, useRef, useEffect } from "react"
 
 // Helper function to convert course name to URL
@@ -85,6 +85,9 @@ const domains = [
 
 export function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isCareerExpanded, setIsCareerExpanded] = useState(false)
+  const [activeMobileDomain, setActiveMobileDomain] = useState<string | null>(null)
   const [activeDomain, setActiveDomain] = useState(domains[0].name)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
@@ -101,30 +104,31 @@ export function Header() {
   const activeCourses = domains.find((d) => d.name === activeDomain)?.courses || []
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <>
+    <header className="sticky top-0 z-50 bg-white">
+      <div className="w-full px-4 sm:px-6 lg:px-12">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold">
+            <span className="text-xl sm:text-2xl font-bold">
               <span className="text-gray-800">Launch</span>
               <span className="text-[#ff6b4a]">ed</span>
             </span>
-            <span className="text-[#ff6b4a] text-2xl ml-1">🚀</span>
+            <span className="text-[#ff6b4a] text-xl sm:text-2xl ml-1">🚀</span>
           </Link>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link href="#" className="text-gray-700 font-medium hover:text-[#ff6b4a] transition-colors">
+            <Link href="#" className="text-gray-600 text-sm hover:text-[#ff6b4a] transition-colors">
               Placement Accelerator
             </Link>
 
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className={`flex items-center gap-1 font-medium transition-colors ${
+                className={`flex items-center gap-1 text-sm transition-colors ${
                   isDropdownOpen
                     ? "text-gray-900"
-                    : "text-gray-700 hover:text-[#ff6b4a]"
+                    : "text-gray-600 hover:text-[#ff6b4a]"
                 }`}
               >
                 Career Launchpad
@@ -202,15 +206,15 @@ export function Header() {
               )}
             </div>
 
-            <Link href="#" className="text-gray-700 font-medium hover:text-[#ff6b4a] transition-colors">
+            <Link href="#" className="text-gray-600 text-sm hover:text-[#ff6b4a] transition-colors">
               Study Abroad
             </Link>
 
-            <Link href="#" className="text-gray-700 font-medium hover:text-[#ff6b4a] transition-colors">
+            <Link href="#" className="text-gray-600 text-sm hover:text-[#ff6b4a] transition-colors">
               Campus Ambassador
             </Link>
 
-            <Link href="#" className="text-gray-700 font-medium hover:text-[#ff6b4a] transition-colors">
+            <Link href="#" className="text-gray-600 text-sm hover:text-[#ff6b4a] transition-colors">
               Contact Us
             </Link>
           </nav>
@@ -219,20 +223,166 @@ export function Header() {
           <div className="flex items-center gap-3">
             <Link
               href="#"
-              className="hidden sm:inline-flex px-5 py-2 bg-[#ff6b4a] text-white font-medium rounded-md hover:bg-[#ff5533] transition-colors text-sm"
+              className="hidden lg:inline-flex px-5 py-2 bg-[#ff6b4a] text-white font-medium rounded-md hover:bg-[#ff5533] transition-colors text-sm"
             >
               LMS Log In
             </Link>
             <Link
               href="#"
-              className="hidden sm:inline-flex px-5 py-2 bg-[#ff6b4a] text-white font-medium rounded-md hover:bg-[#ff5533] transition-colors text-sm"
+              className="hidden lg:inline-flex px-5 py-2 bg-[#ff6b4a] text-white font-medium rounded-md hover:bg-[#ff5533] transition-colors text-sm"
             >
               LMS Log In 2.0
             </Link>
+            
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-2 text-gray-700 hover:text-[#ff6b4a]"
+            >
+              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
           </div>
         </div>
       </div>
+      
+      {/* Fixed Red Line */}
+      <div className="w-full h-[3px] bg-[#FF6B4A]"></div>
+      
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-white border-t border-gray-100 shadow-lg max-h-[calc(100vh-5rem)] overflow-y-auto">
+          {/* Show domain courses if a domain is selected */}
+          {activeMobileDomain ? (
+            <div className="px-4 py-6">
+              <button
+                onClick={() => setActiveMobileDomain(null)}
+                className="flex items-center gap-2 text-gray-700 mb-4"
+              >
+                <ChevronDown className="h-5 w-5 -rotate-90" />
+                <span className="font-semibold">Back</span>
+              </button>
+              <h3 className="text-lg font-bold text-gray-900 mb-4">{activeMobileDomain}</h3>
+              <div className="space-y-2">
+                {domains.find(d => d.name === activeMobileDomain)?.courses.map((course) => (
+                  <Link
+                    key={course.name}
+                    href={getCourseUrl(course.name)}
+                    onClick={() => {
+                      setIsMobileMenuOpen(false)
+                      setActiveMobileDomain(null)
+                    }}
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                  >
+                    <img
+                      src={course.image || "/placeholder.svg"}
+                      alt={course.name}
+                      className="w-12 h-12 rounded-lg object-cover"
+                    />
+                    <div className="flex-1">
+                      <p className="text-xs text-gray-400">Launched Global</p>
+                      <p className="font-medium text-gray-900">{course.name}</p>
+                    </div>
+                    <ChevronRight className="h-5 w-5 text-gray-400" />
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div className="px-4 py-6 space-y-4">
+              <div className="pb-4 border-b border-gray-100">
+                <h3 className="text-lg font-bold text-gray-900">All Courses</h3>
+              </div>
+              
+              <Link 
+                href="#" 
+                className="flex items-center justify-between py-3 text-gray-700 hover:text-[#ff6b4a] transition-colors border-b border-gray-100"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <span>Placement Accelerator</span>
+                <ChevronRight className="h-5 w-5" />
+              </Link>
+              
+              <Link 
+                href="#" 
+                className="flex items-center justify-between py-3 text-gray-700 hover:text-[#ff6b4a] transition-colors border-b border-gray-100"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <span>Study Abroad</span>
+                <ChevronRight className="h-5 w-5" />
+              </Link>
+              
+              <div className="border-b border-gray-100">
+                <button
+                  onClick={() => setIsCareerExpanded(!isCareerExpanded)}
+                  className="w-full flex items-center justify-between py-3 text-gray-700 hover:text-[#ff6b4a] transition-colors"
+                >
+                  <span>Career Launchpad</span>
+                  <ChevronDown className={`h-5 w-5 transition-transform ${isCareerExpanded ? 'rotate-180' : ''}`} />
+                </button>
+                {isCareerExpanded && (
+                  <div className="pb-3 space-y-1">
+                    {domains.map((domain) => (
+                      <button
+                        key={domain.name}
+                        onClick={() => setActiveMobileDomain(domain.name)}
+                        className="w-full flex items-center justify-between py-2.5 px-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
+                      >
+                        <span className="text-sm">{domain.name}</span>
+                        <ChevronRight className="h-4 w-4 text-gray-400" />
+                      </button>
+                    ))}
+                    <Link 
+                      href="#" 
+                      className="block py-2.5 px-3 text-sm text-[#ff6b4a] hover:underline"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      View All
+                    </Link>
+                  </div>
+                )}
+              </div>
+              
+              <Link 
+                href="#" 
+                className="flex items-center justify-between py-3 text-gray-700 hover:text-[#ff6b4a] transition-colors border-b border-gray-100"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <span>Campus Ambassador</span>
+                <ChevronRight className="h-5 w-5" />
+              </Link>
+              
+              <Link 
+                href="#" 
+                className="flex items-center justify-between py-3 text-gray-700 hover:text-[#ff6b4a] transition-colors border-b border-gray-100"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <span>Contact Us</span>
+                <ChevronRight className="h-5 w-5" />
+              </Link>
+              
+              <div className="pt-4">
+                <h3 className="text-sm font-semibold text-gray-500 mb-3">More</h3>
+                <div className="flex gap-3">
+                  <Link
+                    href="#"
+                    className="flex-1 px-4 py-2 bg-[#ff6b4a] text-white text-center font-medium rounded-md hover:bg-[#ff5533] transition-colors text-sm"
+                  >
+                    LMS Log In
+                  </Link>
+                  <Link
+                    href="#"
+                    className="flex-1 px-4 py-2 bg-[#ff6b4a] text-white text-center font-medium rounded-md hover:bg-[#ff5533] transition-colors text-sm"
+                  >
+                    LMS Log In 2.0
+                  </Link>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
     </header>
+    </>
   )
 }
 

@@ -310,6 +310,13 @@ export default function DigitalMarketingCoursePage() {
             </ul>
           </div>
         </div>
+
+        {/* Enroll Button */}
+        <div className="flex justify-center mt-12">
+          <Button className="bg-[#FF6B4A] hover:bg-[#e85a4f] text-white px-10 py-4 text-base rounded-lg shadow-md font-semibold">
+            Enroll Now & Start Your Digital Marketing Journey
+          </Button>
+        </div>
       </section>
 
       {/* Curriculum Section */}
@@ -366,13 +373,14 @@ export default function DigitalMarketingCoursePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black text-white">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1a1a2e] overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12">
             Loved by thousands of students
           </h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="overflow-hidden">
+            <div className="flex gap-6 animate-scroll" style={{width: 'max-content'}}>
             {[
               {
                 name: "Megha T",
@@ -405,13 +413,13 @@ export default function DigitalMarketingCoursePage() {
                 text: "This course taught me to implement RPA bots in real business settings. I now automate repetitive tasks for my entire team."
               }
             ].map((testimonial, index) => (
-              <div key={index} className="bg-gray-900 p-6 rounded-2xl">
+              <div key={index} className="w-[380px] flex-shrink-0 bg-[#2a2a3e] p-6 rounded-2xl hover:bg-[#3a3a4e] transition-colors">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center text-white font-bold">
                     {testimonial.name.charAt(0)}
                   </div>
                   <div>
-                    <div className="font-semibold">{testimonial.name}</div>
+                    <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-gray-400">{testimonial.role}</div>
                   </div>
                 </div>
@@ -420,6 +428,7 @@ export default function DigitalMarketingCoursePage() {
                 </p>
               </div>
             ))}
+            </div>
           </div>
         </div>
       </section>
@@ -630,32 +639,36 @@ export default function DigitalMarketingCoursePage() {
 
       {/* FAQ Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-[#1a1a2e] mb-4">Frequently Asked Questions</h2>
-        <p className="text-center text-gray-600 mb-12">Everything you need to know about our Digital Marketing Mentor-Led Course</p>
+        <h2 className="text-3xl lg:text-4xl font-bold text-center text-[#1a1a2e] mb-3">Frequently Asked Questions</h2>
+        <p className="text-center text-gray-500 text-sm mb-10">Everything you need to know about our Digital Marketing Mentor-Led Course</p>
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="border border-gray-200 rounded-xl overflow-hidden">
+            <div key={index} className={`rounded-xl shadow-sm transition-all duration-300 cursor-pointer border overflow-hidden ${
+              openIndex === index
+                ? "border-[#FF6B4A] bg-gradient-to-r from-[#FF6B4A]/5 to-transparent shadow-lg"
+                : "border-gray-200 bg-white hover:shadow-md hover:border-[#FF6B4A]/30"
+            }`}>
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors"
+                className="w-full flex items-center justify-between p-5 text-left transition-colors"
               >
-                <span className="font-semibold text-[#1a1a2e]">{faq.question}</span>
+                <span className="text-lg lg:text-xl font-normal text-[#1a1a2e] pr-4">{faq.question}</span>
                 <ChevronDown
-                  className={`h-5 w-5 text-gray-500 transition-transform ${openIndex === index ? "rotate-180" : ""}`}
+                  className={`h-5 w-5 flex-shrink-0 transition-transform ${openIndex === index ? "rotate-180 text-[#FF6B4A]" : "text-gray-500"}`}
                 />
               </button>
               {openIndex === index && (
-                <div className="px-6 pb-6">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                <div className="px-5 pb-5">
+                  <p className="text-gray-600 text-sm leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Button className="bg-[#e85a4f] hover:bg-[#d04943] text-white px-8 py-4">
+        <div className="text-center mt-10">
+          <Button className="bg-[#FF6B4A] hover:bg-[#e85a4f] text-white px-8 py-3 text-sm rounded-lg shadow-md">
             Contact Us
           </Button>
         </div>

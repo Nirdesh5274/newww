@@ -52,18 +52,21 @@ export function CourseFeatures() {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature, index) => (
-          <div key={index} className="p-6 border border-gray-100 rounded-2xl hover:shadow-lg transition-shadow">
+          <div 
+            key={index} 
+            className="group p-6 bg-white border border-gray-100 rounded-2xl hover:shadow-2xl hover:border-[#FF6B4A]/40 hover:bg-gradient-to-br hover:from-[#FF6B4A]/8 hover:to-[#FF6B4A]/3 transition-all duration-300 cursor-pointer transform hover:-translate-y-1"
+          >
             <div className="flex items-start gap-4 mb-4">
-              <div className="p-3 bg-gray-50 rounded-xl">
-                <feature.icon className="h-8 w-8 text-[#1a1a2e]" />
+              <div className="p-3 bg-gray-50 rounded-xl group-hover:bg-[#FF6B4A]/15 transition-all duration-300">
+                <feature.icon className="h-8 w-8 text-[#1a1a2e] group-hover:text-[#FF6B4A] transition-colors duration-300" />
               </div>
-              <h3 className="text-lg font-bold text-[#1a1a2e] pt-2">{feature.title}</h3>
+              <h3 className="text-lg font-bold text-[#1a1a2e] pt-2 group-hover:text-[#FF6B4A] transition-colors duration-300">{feature.title}</h3>
             </div>
             <p className="text-gray-600 mb-4">{feature.description}</p>
             <ul className="space-y-2">
               {feature.points.map((point, i) => (
                 <li key={i} className="flex items-center gap-2 text-sm text-gray-700">
-                  <Check className="h-4 w-4 text-gray-500" />
+                  <Check className="h-4 w-4 text-gray-500 group-hover:text-[#FF6B4A] transition-colors duration-300" />
                   {point}
                 </li>
               ))}
